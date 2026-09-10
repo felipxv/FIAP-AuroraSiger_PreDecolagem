@@ -1,0 +1,1 @@
+# nesse arquivo ficaram as funções de validação para Pre-decolagem
