@@ -7,8 +7,22 @@ modulos_crit = int(input("Digite 1 caso módulos críticos Ok"))
 
 # Instanciando variaveis: Análise energética
 # Capacidade total do sistema de energia, em kWh
-carga_Total = 150
-
+capacidade_total = 150
+consumo_decolagem = 30
 carga_atual = float(input("Digite o percentual de carga atual(deve ser maior que 40%): "))
 perdas = float(input("digite a porcentagem de perdas energeticas estimadas: "))
+
+# Instanciando variaveis: Calculos de análise energética
+
+# Calcula a energia disponível inicialmente
+energia_disponivel = capacidade_total * (carga_atual / 100)
+
+# Calcula a energia perdida
+energia_perdida = energia_disponivel * (perdas / 100)
+
+# Calcula a energia útil após considerar as perdas
+energia_util = energia_disponivel - energia_perdida
+
+# Calcula a energia útil após considerar as perdas
+energia_restante = energia_util - consumo_decolagem
 
