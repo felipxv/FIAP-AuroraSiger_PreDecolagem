@@ -36,3 +36,13 @@ def verificar_nivel_energia(nivel_energia):
     else:
         print("Nível de energia insuficiente!")
         return False, f"Nível de energia insuficiente: {nivel_energia}% (mínimo exigido: 40%)"
+
+
+def verificar_pressao_tanque(nome_tanque, pressao):
+    print(f"Verificação de pressão do tanque de {nome_tanque} iniciada.")
+    if 150.0 <= pressao <= 200.0:
+        print(f"Pressão do tanque de {nome_tanque} válida!")
+        return True, None
+    else:
+        print(f"Pressão do tanque de {nome_tanque} inválida!")
+        return False, f"Pressão do tanque de {nome_tanque} fora da faixa segura: {pressao} bar"
