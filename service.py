@@ -26,3 +26,13 @@ def verificar_integridade_estrutural(integridade):
     else:
         print("Integridade estrutural comprometida!")
         return False, "Integridade estrutural comprometida (sensor reportou 0)"
+
+
+def verificar_nivel_energia(nivel_energia):
+    print("Verificação de nível de energia iniciada.")
+    if nivel_energia >= 40:
+        print("Nível de energia válido!")
+        return True, None
+    else:
+        print("Nível de energia insuficiente!")
+        return False, f"Nível de energia insuficiente: {nivel_energia}% (mínimo exigido: 40%)"
