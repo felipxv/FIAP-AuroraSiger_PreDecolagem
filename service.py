@@ -6,3 +6,13 @@ def verificar_temperatura_interna(temp_interna):
     else:
         print("Temperatura interna inválida!")
         return False, f"Temperatura interna fora da faixa segura: {temp_interna}°C (esperado 18.0–27.0)"
+
+
+def verificar_temperatura_externa(temp_externa):
+    print("Verificação de temperatura externa iniciada.")
+    if -60.0 <= temp_externa <= 45.0:
+        print("Temperatura externa válida!")
+        return True, None
+    else:
+        print("Temperatura externa inválida!")
+        return False, f"Temperatura externa fora da faixa segura: {temp_externa}°C (esperado -60.0–45.0)"
