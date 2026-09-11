@@ -53,3 +53,5 @@ imprimir_tabela("ANÁLISE ENERGÉTICA", [
     ("Consumo estimado na decolagem", f"{consumo_decolagem:.2f} kWh"),
     ("Energia restante pós-decolagem", f"{energia_restante:.2f} kWh"),
 ])
+
+# Iniciando Leitura de dados
