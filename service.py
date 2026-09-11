@@ -30,7 +30,7 @@ def verificar_integridade_estrutural(integridade):
 
 def verificar_nivel_energia(nivel_energia):
     print("Verificação de nível de energia iniciada.")
-    if nivel_energia >= 40:
+    if nivel_energia >= 40.0:
         print("Nível de energia válido!")
         return True, None
     else:
@@ -46,3 +46,14 @@ def verificar_pressao_tanque(nome_tanque, pressao):
     else:
         print(f"Pressão do tanque de {nome_tanque} inválida!")
         return False, f"Pressão do tanque de {nome_tanque} fora da faixa segura: {pressao} bar"
+
+
+def verificar_modulos_criticos(modulos_criticos):
+    print("Verificação dos módulos críticos iniciada.")
+    falhas = [f"Falha no módulo crítico: '{nome}'"
+              for nome, status in modulos_criticos.items() if status != 1]
+    if falhas:
+        print("Um ou mais módulos críticos com falha!")
+        return False, falhas
+    print("Todos os módulos críticos operacionais!")
+    return True, None
