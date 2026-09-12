@@ -1,3 +1,5 @@
+from service import *
+
 # Instanciando variaveis: Organização e descrição da telemetria
 temp_interna = float(input("Digite a temperatura interna(deve estar entre 18.0°C e 27.0°C ): "))
 temp_externa = float(input("Digite a temperatura externa(deve estar entre -60.0°C e 45°C): "))
@@ -54,4 +56,6 @@ imprimir_tabela("ANÁLISE ENERGÉTICA", [
     ("Energia restante pós-decolagem", f"{energia_restante:.2f} kWh"),
 ])
 
-# Iniciando Leitura de dados
+pre_decolagem()
+
+decolagem()
